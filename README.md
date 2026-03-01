@@ -1,70 +1,127 @@
-# Getting Started with Create React App
+# Figma to React.js (Portfolio UI)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is the implementation of **Task 1** assigned during the Full Stack Developer interview process.
 
-## Available Scripts
+The objective was to convert the provided **Figma design** into a **fully responsive React.js application** while maintaining visual accuracy, proper layout structure, and clean component architecture.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 📌 Task Objective
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Convert the first two sections of the given Figma design into a responsive React application using modern frontend practices.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+✅ Figma Design
+https://www.figma.com/design/anWAMdHd4HWGRTexYLRcVo/Portfolio-Design--Community-
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🧱 Tech Stack
 
-### `npm run build`
+* **React.js**
+* **Material UI (MUI)**
+* **AOS (Animate On Scroll)**
+* **Vanilla Tilt**
+* **Custom CSS / MUI SX Styling**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## ✨ Implemented Features
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 🎨 UI Implementation
 
-### `npm run eject`
+* Pixel-accurate Figma to React conversion
+* Custom gradients & glow effects
+* Typography matching design system
+* Proper spacing and layout alignment
+* Dark theme portfolio design
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 📱 Responsive Design
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* Mobile responsive
+* Tablet optimized
+* Desktop layout support
+* Flexible container system
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### ⚡ Animations & Interactions
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* Scroll animations using AOS
+* Typing text animation in Hero section
+* Decrypted hover text effect
+* 3D profile image tilt interaction
+* Smooth hover transitions
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📂 Project Structure
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+src/
+ ├── components/
+ │   ├── Header.jsx
+ │   ├── Hero.jsx
+ │   ├── WorkExperience.jsx
+ │   ├── TypingText.jsx
+ │   └── DecryptText.jsx
+ │
+ ├── pages/
+ │   └── index.jsx
+ │
+ ├── styles/
+ │   └── style.css
+ │
+ ├── theme/
+ │   └── theme.js
+ │
+ ├── ui/
+ │   ├── decryptText.jsx
+ │   └── typingtext.jsx
+ │
+ └── App.js
+```
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## ⚙️ Installation & Setup
 
-### Analyzing the Bundle Size
+### 1️⃣ Clone Repository
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```
+git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
+cd YOUR_REPO
+```
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 2️⃣ Install Dependencies
 
-### Advanced Configuration
+```
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+### 3️⃣ Run Project
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```
+npm start
+```
 
-### `npm run build` fails to minify
+Application runs at:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+http://localhost:3000
+```
+
+---
+
+## 🎯 Development Focus
+
+This task focuses on:
+
+* Figma to Code accuracy
+* Component-based architecture
+* Responsive layout design
+* Animation integration
+* Clean and maintainable React code
+
+---
