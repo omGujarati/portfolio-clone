@@ -55,30 +55,66 @@ https://www.figma.com/design/anWAMdHd4HWGRTexYLRcVo/Portfolio-Design--Community-
 ## 📂 Project Structure
 
 ```
-src/
- ├── components/
- │   ├── Header.jsx
- │   ├── Hero.jsx
- │   ├── WorkExperience.jsx
- │   ├── TypingText.jsx
- │   └── DecryptText.jsx
- │
- ├── pages/
- │   └── index.jsx
- │
- ├── styles/
- │   └── style.css
- │
- ├── theme/
- │   └── theme.js
- │
- ├── ui/
- │   ├── decryptText.jsx
- │   └── typingtext.jsx
- │
- └── App.js
-```
+src
+│
+├── components
+│   ├── hero
+│   |  ├── Hero.jsx
+│   |  ├── HeroAvatar.jsx
+│   |  ├── HeroIntro.jsx
+│   |  └── HeroTyping.jsx
+│   | 
+│   ├── experience
+│   |  ├── WorkExperience.jsx
+│   |  ├── ExperienceCard.jsx
+│   |  └── IconPlatform.jsx
+│   │
+│   └── layout
+│      └── Header.jsx
+|
+├── pages
+│  └── Home.jsx
+| 
+├── shared
+│  ├── DecryptText.jsx
+│  ├── TypingText.jsx
+│  └── HamburgerButton.jsx
+| 
+├── styles
+│  ├── base.css
+│  ├── tokens.css
+│  ├── utilities.css
+│  ├── main.css
+|  |
+│  |  ├── hero
+│  |  └── hero.css
+|  |
+│  ├── experience
+│  |  └── work.css
+|  |
+│  ├── layout
+│  |  ├── header.css
+│  |  └── container.css
+|  |
+│  └── components
+│     ├── button.css
+│     └── card.css
+├── theme
+│  └── theme.js
+|
+├── App.js
+└── index.js
 
+```
+### ⚙️ Architecture Principles
+
+* **Feature-based component structure for scalability**
+* **Reusable shared components**
+* **Modular CSS structure instead of inline styles**
+* **Clean separation between UI, layout, and shared logic**
+---
+
+Animation support using AOS and VanillaTilt
 ---
 
 ## ⚙️ Installation & Setup
