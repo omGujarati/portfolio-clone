@@ -147,7 +147,8 @@
 
 @media(max-width:600px) {
     .hero-intro {
-        font-size: 17px !important
+        font-size: 17px !important;
+        margin: 28px 0 20px !important
     }
 }
 
@@ -166,6 +167,12 @@
 
 .hero-name {
     color: var(--primary)
+}
+
+@media(min-width:900px) {
+    .hero-about {
+        margin-left: 40px;
+    }
 }
 
 .hero-designer {

@@ -2,43 +2,36 @@ import React from "react";
 import { Box, Typography } from "@mui/material";
 import { TypingText } from "../../shared/Typingtext";
 
+const TYPING_TEXTS = [
+  "I'm a Software Engineer",
+  "Full Stack Developer",
+  "React + MERN Developer",
+  "UI Focused Engineer",
+];
+
 function HeroTyping() {
-
   return (
-
     <Box data-aos="fade-up" data-aos-duration="1200">
 
       <Typography className="hero-typing">
-
-        <TypingText
-          texts={[
-            "I'm a Software Engineer",
-            "Full Stack Developer",
-            "React + MERN Developer",
-            "UI Focused Engineer",
-          ]}
-        />
-
+        <TypingText texts={TYPING_TEXTS} />
       </Typography>
 
       <Typography className="hero-company">
-
         Currently, I am a Software Engineer at{" "}
-
         <span className="hero-facebook">
 
           <img
             src="/images/facebook.svg"
-            alt="facebook icon"
+            alt="Facebook logo"
             className="facebook-icon"
+            loading="lazy"
           />
 
           Facebook
 
         </span>
-
         ,
-
       </Typography>
 
       <Typography
@@ -46,15 +39,12 @@ function HeroTyping() {
         data-aos="fade-up"
         data-aos-duration="1000"
       >
-
         A self-taught UI/UX designer functioning in the industry
         for 3+ years now. I make meaningful and delightful digital
         products balancing user needs and business goals.
-
       </Typography>
 
     </Box>
-
   );
 }
 

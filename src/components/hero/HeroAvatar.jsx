@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Box } from "@mui/material";
 import VanillaTilt from "vanilla-tilt";
-import { useEffect, useRef } from "react";
 
 function HeroAvatar() {
 
@@ -10,6 +9,8 @@ function HeroAvatar() {
   useEffect(() => {
 
     const tiltNode = tiltRef.current;
+
+    if (!tiltNode) return;
 
     VanillaTilt.init(tiltNode, {
       max: 15,
@@ -21,13 +22,14 @@ function HeroAvatar() {
     });
 
     return () => {
-      tiltNode.vanillaTilt.destroy();
+      if (tiltNode.vanillaTilt) {
+        tiltNode.vanillaTilt.destroy();
+      }
     };
 
   }, []);
 
   return (
-
     <Box
       className="hero-avatar flex-center"
       data-aos="zoom-out"
@@ -41,9 +43,7 @@ function HeroAvatar() {
         viewBox="0 0 258 259"
         className="avatar-svg"
       >
-
         <defs>
-
           <radialGradient
             id="avatarGlow"
             cx="0"
@@ -52,13 +52,9 @@ function HeroAvatar() {
             gradientUnits="userSpaceOnUse"
             gradientTransform="translate(129 129.5) rotate(90) scale(129.5 129)"
           >
-
             <stop offset="0.177083" stopColor="white" />
-
             <stop offset="1" stopColor="#434343" stopOpacity="0" />
-
           </radialGradient>
-
         </defs>
 
         <ellipse
@@ -68,25 +64,24 @@ function HeroAvatar() {
           ry="129.5"
           fill="url(#avatarGlow)"
         />
-
       </Box>
 
       <Box
         ref={tiltRef}
         component="img"
         src="/images/me.png"
-        alt="profile"
+        alt="Ibrahim Memon profile"
         className="profile-img"
       />
 
       <Box
         component="img"
         src="/images/Arrow.png"
+        alt="decorative arrow"
         className="arrow-img"
       />
 
     </Box>
-
   );
 }
 

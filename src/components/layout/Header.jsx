@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState,} from "react";
 import "@fontsource/preahvihear";
 import {
   Box,
@@ -11,9 +11,10 @@ import {
   useTheme,
   useMediaQuery,
 } from "@mui/material";
-import AOS from "aos";
 import "aos/dist/aos.css";
 import HamburgerButton from "../../shared/HamburgerButton";
+
+const NAV_ITEMS = ["Home", "About", "Lab"];
 
 function Header() {
 
@@ -21,58 +22,43 @@ function Header() {
   const theme = useTheme();
   const mobile = useMediaQuery(theme.breakpoints.down("md"));
 
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      easing: "ease-in-out",
-      once: true,
-      mirror: false,
-    });
-    AOS.refresh();
-  }, []);
-
+  const toggleDrawer = () => {
+    setOpen(prev => !prev);
+  };
 
   return (
-    <> <AppBar
-      data-aos="fade-down"
-      data-aos-anchor="#example-anchor"
-      data-aos-offset="500"
-      data-aos-duration="500"
-      elevation={0}
-      position="fixed"
-      className="header-appbar "
-    >
+    <>
+      <AppBar
+        data-aos="fade-down"
+        elevation={0}
+        position="fixed"
+        className="header-appbar"
+      >
+        <Toolbar className="header-toolbar container flex-between">
 
+          <Box
+            component="img"
+            src="/images/Logo.png"
+            alt="Portfolio Logo"
+            className="header-logo"
+          />
 
-      <Toolbar className="header-toolbar container flex-between">
-        <Box
-          component="img"
-          src="/images/Logo.png"
-          className="header-logo"
-        />
+          {!mobile && (
+            <Box className="header-nav flex-align-center">
+              {NAV_ITEMS.map((item) => (
+                <Typography key={item} className="nav-item">
+                  {item}
+                </Typography>
+              ))}
+            </Box>
+          )}
 
-        {!mobile && (
-          <Box className="header-nav flex-align-center">
-            {["Home", "About", "Lab"].map((item) => (
-              <Typography
-                key={item}
-                className="nav-item"
-              >
-                {item}
-              </Typography>
-            ))}
-          </Box>
-        )}
-
-      </Toolbar>
-    </AppBar>
+        </Toolbar>
+      </AppBar>
 
       {mobile && (
         <Box className="mobile-hamburger">
-          <HamburgerButton
-            open={open}
-            toggle={() => setOpen(!open)}
-          />
+          <HamburgerButton open={open} toggle={toggleDrawer} />
         </Box>
       )}
 
@@ -85,7 +71,7 @@ function Header() {
       >
 
         <List className="drawer-list">
-          {["Home", "About", "Lab"].map((item) => (
+          {NAV_ITEMS.map((item) => (
             <ListItem key={item} disablePadding>
               <Typography
                 className="drawer-item"
@@ -99,8 +85,6 @@ function Header() {
 
       </Drawer>
     </>
-
-
   );
 }
 

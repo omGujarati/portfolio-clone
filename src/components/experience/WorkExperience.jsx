@@ -1,34 +1,20 @@
 import React from "react";
 import "@fontsource/preahvihear";
 import { Box, Typography } from "@mui/material";
-import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+
 import ExperienceCard from "./ExperienceCard";
+
+const EXPERIENCE_DATA = [
+  { icon: "/images/card1.svg", variant: "right" },
+  { icon: "/images/card2.svg", variant: "left" },
+  { icon: "/images/card3.svg", variant: "left" },
+  { icon: "/images/card4.svg", variant: "right" },
+];
 
 function WorkExperience() {
 
-  const DATA = [
-    { icon: "/images/card1.svg", variant: "right" },
-    { icon: "/images/card2.svg", variant: "left" },
-    { icon: "/images/card3.svg", variant: "left" },
-    { icon: "/images/card4.svg", variant: "right" },
-  ];
-
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      easing: "ease-in-out",
-      once: true,
-      mirror: false,
-    });
-
-    AOS.refresh();
-
-  }, []);
-
   return (
-
     <Box className="work-section">
 
       <Box className="work-glow" />
@@ -44,15 +30,13 @@ function WorkExperience() {
 
         <Box className="work-grid grid">
 
-          {DATA.map((item, i) => (
-
+          {EXPERIENCE_DATA.map((item, index) => (
             <ExperienceCard
-              key={i}
+              key={item.icon}
               {...item}
-              aos={i % 2 === 0 ? "fade-right" : "fade-left"}
-              delay={i * 150}
+              aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+              delay={index * 150}
             />
-
           ))}
 
         </Box>
@@ -60,7 +44,6 @@ function WorkExperience() {
       </Box>
 
     </Box>
-
   );
 }
 

@@ -2,13 +2,17 @@ import React from "react";
 import { Box, Typography } from "@mui/material";
 import IconPlatform from "./IconPlatform";
 
-function ExperienceCard({ icon, variant, aos, delay }) {
+function ExperienceCard({
+  icon,
+  variant = "left",
+  aos = "fade-up",
+  delay = 0,
+}) {
 
   const gradientClass =
     variant === "right" ? "gradient-right" : "gradient-left";
 
   return (
-
     <Box
       data-aos={aos}
       data-aos-delay={delay}
@@ -16,6 +20,7 @@ function ExperienceCard({ icon, variant, aos, delay }) {
     >
 
       <Box className={`work-card ${gradientClass}`}>
+
         <Box className="card-line" />
 
         <Box className="card-flex flex-align-center">
@@ -33,7 +38,11 @@ function ExperienceCard({ icon, variant, aos, delay }) {
               amazing tool of digital onboarding process.
             </Typography>
 
-            <Box className="learn-btn">
+            <Box
+              className="learn-btn"
+              role="button"
+              tabIndex={0}
+            >
               LEARN MORE
             </Box>
 
@@ -44,7 +53,6 @@ function ExperienceCard({ icon, variant, aos, delay }) {
       </Box>
 
     </Box>
-
   );
 }
 
