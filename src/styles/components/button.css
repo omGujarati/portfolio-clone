@@ -1,0 +1,31 @@
+/* ================= BUTTON ================= */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 28px;
+    border-radius: var(--radius);
+    font-family: var(--font);
+    cursor: pointer;
+    transition: .35s;
+}
+
+.btn-primary {
+    border: 1.5px solid rgba(155, 89, 216, .6);
+    background: linear-gradient(180deg,
+            rgba(155, 89, 216, .12),
+            rgba(155, 89, 216, .04));
+    box-shadow: inset 0 0 12px rgba(155, 89, 216, .25);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    border: 1.5px solid var(--primary-light);
+    background: linear-gradient(180deg,
+            rgba(155, 89, 216, .25),
+            rgba(155, 89, 216, .08));
+    box-shadow:
+        inset 0 0 18px rgba(155, 89, 216, .45),
+        0 0 18px rgba(155, 89, 216, .35);
+}

@@ -1,0 +1,31 @@
+/* ================= CONTAINER ================= */
+
+.container {
+    max-width: var(--container);
+    width: 100%;
+    margin: auto;
+}
+
+@media(max-width:600px) {
+    .container {
+        padding: 0 16px !important
+    }
+}
+
+@media(min-width:600px) {
+    .container {
+        padding: 0 32px !important
+    }
+}
+
+@media(min-width:900px) {
+    .container {
+        padding: 0 48px !important
+    }
+}
+
+@media(min-width:1200px) {
+    .container {
+        padding: 0 112px !important
+    }
+}

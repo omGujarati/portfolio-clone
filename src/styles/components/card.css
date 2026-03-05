@@ -1,0 +1,29 @@
+/* ================= CARD ================= */
+
+.card {
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(123, 47, 190, .35);
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 30px 80px rgba(123, 47, 190, .45);
+}
+
+.card-padding {
+    padding: 32px;
+}
+
+.card-gradient-right {
+    background: linear-gradient(90deg, #120028, #2a0f4f);
+}
+
+.card-gradient-left {
+    background: linear-gradient(104deg,
+            #130428 .58%,
+            #251043 16.32%,
+            #38126D 29.33%,
+            #261045 45.66%,
+            #190634 54.44%);
+}

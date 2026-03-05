@@ -1,0 +1,141 @@
+/* ================= HEADER ================= */
+
+.header-appbar {
+    background: rgba(26, 11, 46, 0.75) !important;
+    backdrop-filter: blur(18px) !important;
+    border-bottom: 1px solid var(--border) !important
+}
+
+@media(max-width:600px) {
+    .header-toolbar {
+        height: 64px
+    }
+}
+
+@media(min-width:900px) {
+    .header-toolbar {
+        height: 88px
+    }
+}
+
+.header-logo {
+    flex-shrink: 0
+}
+
+.header-nav {
+    gap: 72px
+}
+
+.nav-item {
+    font-family: var(--font) !important;
+    font-size: var(--text-md);
+    color: var(--white-soft);
+    cursor: pointer;
+    transition: .25s;
+    position: relative
+}
+
+.nav-item:hover {
+    color: var(--white)
+}
+
+.nav-item::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary), var(--primary-light));
+    transition: .3s
+}
+
+.nav-item:hover::after {
+    width: 100%
+}
+
+/* ================= HAMBURGER ================= */
+
+.mobile-hamburger {
+    position: fixed;
+    right: 20px;
+    top: 12px;
+    z-index: 1300;
+    transition: .45s cubic-bezier(.77, 0, .18, 1)
+}
+
+.hamburger-button {
+    width: 42px;
+    height: 42px;
+    color: #fff
+}
+
+.hamburger-box {
+    width: 26px;
+    height: 18px;
+    position: relative
+}
+
+.hamburger-line {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #fff
+}
+
+.line-top {
+    top: 0;
+    transform-origin: center;
+    transition: .35s, .45s
+}
+
+.line-middle {
+    top: 8px;
+    transition: .25s, .2s
+}
+
+.line-bottom {
+    top: 16px;
+    transform-origin: center;
+    transition: .35s, .45s
+}
+
+.hamburger-open .line-top {
+    top: 8px;
+    transform: rotate(45deg) scaleX(1.05)
+}
+
+.hamburger-open .line-middle {
+    opacity: 0;
+    transform: scaleX(0)
+}
+
+.hamburger-open .line-bottom {
+    top: 8px;
+    transform: rotate(-45deg) scaleX(1.05)
+}
+
+.mobile-drawer {
+    width: 280px;
+    background: linear-gradient(180deg, #110022, var(--bg-dark)) !important;
+    backdrop-filter: blur(20px);
+    padding: 80px 32px 0
+}
+
+.drawer-list {
+    margin-top: 32px
+}
+
+.drawer-item {
+    font-family: var(--font) !important;
+    font-size: 20px;
+    padding: 16px 0;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s
+}
+
+.drawer-item:hover {
+    color: var(--primary-light);
+    transform: translateX(6px)
+}

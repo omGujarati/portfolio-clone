@@ -1,0 +1,17 @@
+:root {
+    --bg-main: #11071F;
+    --bg-dark: #0A0015;
+    --primary: #7127ba;
+    --primary-light: #9B59D8;
+    --facebook: #1877F2;
+    --white: #fff;
+    --white-soft: rgba(255, 255, 255, .75);
+    --white-light: rgba(255, 255, 255, .65);
+    --border: rgba(255, 255, 255, .08);
+    --font: "Preahvihear", sans-serif;
+    --container: 1440px;
+    --radius: 10px;
+    --radius-lg: 22px;
+    --text-md: 16px;
+    --text-lg: 18px;
+}
